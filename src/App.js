@@ -7,7 +7,6 @@ import "./App.css";
 import config from './config'
 import { AppContext } from "./libs/contextLib";
 import { useHistory, Link } from "react-router-dom";
-import Cookies from 'universal-cookie';
 import axios from 'axios'
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [navClass, setNavClass] = useState("Navbar")
   const history = useHistory()
-  const cookies = new Cookies()
 
   useEffect(() => {
     onLoad();
@@ -33,7 +31,7 @@ function App() {
     try {
       
 
-      userHasAuthenticated(true)
+      // userHasAuthenticated(true)
     } catch(e) {
       console.log(e)
       handleLogout()
