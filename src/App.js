@@ -31,7 +31,7 @@ function App() {
     try {
       
 
-      // userHasAuthenticated(true)
+      userHasAuthenticated(true)
     } catch(e) {
       console.log(e)
       handleLogout()

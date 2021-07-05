@@ -7,6 +7,7 @@ const Login = lazy(() => import("./containers/Login"))
 const Signup = lazy(() => import("./containers/Signup"))
 const LandingPage = lazy(() => import("./containers/LandingPage"))
 const NotFound = lazy(() => import("./containers/NotFound"))
+const Home = lazy(() => import("./containers/Home"))
 
 export default function Routes() {
     return (
@@ -21,6 +22,9 @@ export default function Routes() {
           <UnauthenticatedRoute exact path="/signup">
             <Signup />
           </UnauthenticatedRoute>
+          <AuthenticatedRoute exact path="/home">
+            <Home />
+          </AuthenticatedRoute>
           <Route>
             <NotFound />
           </Route>

@@ -26,7 +26,7 @@ export default function UnauthenticatedRoute({ children, ...rest }) {
       {!isAuthenticated ? (
         children
       ) : (
-        <Redirect to={redirect === "" || redirect === null ? "/" : redirect} />
+        <Redirect to={redirect === "" || redirect === null ? "/home" : redirect} />
       )}
     </Route>
   );
