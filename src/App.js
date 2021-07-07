@@ -42,11 +42,13 @@ function App() {
 
   const handleLogout = async () => {
     try {
-      var response = await fetch(`${config.BASE_URL}/logout`, {
-        mode: 'cors',
-        method: 'GET',
-        credentials: 'include',
+      const token = localStorage.getItem("TOKEN")
+      const response = await axios.get(`${config.API_URL}/api/users/logout`, {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
       })
+      localStorage.removeItem("TOKEN");
 
       console.log(response)
       userHasAuthenticated(false);

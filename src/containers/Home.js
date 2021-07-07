@@ -117,7 +117,7 @@ function Home() {
                                 <Card.Text as="div" className="pt-2">
                                     <b>Cost: </b>{cost} <br />
                                     <b>Status: </b>{orderStatus} <br />
-                                    <b>OrderDate: </b>{orderDate}
+                                    <b>OrderDate: </b>{orderDate} <br />
                                     {orderStatus === 'COMPLETE' && <b>Delivered</b>}
                                     <div className="pt-3">
                                         <Button variant="danger" disabled={orderStatus === 'CANCELED' || orderStatus === 'COMPLETE' ? true : false} onClick={() => cancelOrder(orderId)}>Cancel</Button>
